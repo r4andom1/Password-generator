@@ -6,9 +6,10 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 
 function genPassword() {
     // Generates password for button
-    let randomChar = characters[genRandomNumbers(characters)]
+    
     for (i = 0; i < nrOfChars; i++) {
-        password.push(randomChar)
+        let randomChar = characters[genRandomNumbers(characters)]
+        password += randomChar
     }
     console.log(password)
 }
