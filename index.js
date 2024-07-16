@@ -3,23 +3,22 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
      "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-",
      "+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"
 ];
+let nrOfChars = 12; 
+let password = [];
+let passwordDone = false;
+let passwordEl = document.getElementById("newpassword-el");
 
 function genPassword() {
     // Generates password for button
+    if (! passwordDone) {
+        for (i = 0; i < nrOfChars; i++) {
+            let randomChar = characters[genRandomNumbers(characters)]; // makes random character
+            password += randomChar;
+        }
+        passwordDone = true;
+        passwordEl.textContent += "New Password: " + password;
+    }
     
-    for (i = 0; i < nrOfChars; i++) {
-        let randomChar = characters[genRandomNumbers(characters)]
-        password += randomChar
-    }
-    console.log(password)
-}
-
-function iterateList(list) {
-    // Iterates over list of characters
-    for (let i = 0; i < list.length; i++) {
-        password += list[i]
-    }
-    return password
 }
 
 function genRandomNumbers(list) {
@@ -27,10 +26,7 @@ function genRandomNumbers(list) {
     let listLen = list.length;
     return Math.floor(Math.random() * listLen)
 }
-let nrOfChars = 12; 
-let password = [];
 
-genPassword()
 
 // 1. Have user input how long their password should be.
 // 2. Generate random numbers depending on how long their password is. Store in list?
