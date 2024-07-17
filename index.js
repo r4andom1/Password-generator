@@ -6,7 +6,6 @@ function genPassword(list) {
         password += randomChar;
     }
     return password
-    //passwordEl.textContent = "New Password: " + password;
 }
 
 function genRandomNumbers(list) {
@@ -17,16 +16,16 @@ function genRandomNumbers(list) {
 
 function outputPassword() {
     if (checkboxLet.checked && checkboxNum.checked && checkboxSym.checked) {
-        let letNumSym = letters.concat(numbers, symbols); // concetenates letters, numbers, symbols lists
+        let letNumSym = letters.concat(numbers, symbols); 
         passwordEl.textContent = "New Password: " + genPassword(letNumSym);
     } else if (checkboxLet.checked && checkboxNum.checked) {
-        let letNum = letters.concat(numbers); // concetenates letters and numbers lists
+        let letNum = letters.concat(numbers); 
         passwordEl.textContent = "New Password: " + genPassword(letNum);
     } else if (checkboxLet.checked && checkboxSym.checked) {
-        let letSym = letters.concat(symbols); // concatenates letters and symbols lists
+        let letSym = letters.concat(symbols); 
         passwordEl.textContent = "New Password: " + genPassword(letSym);
     } else if (checkboxNum.checked && checkboxSym.checked) {
-        let numSym = numbers.concat(symbols); // concatenates numbers and symbols lists
+        let numSym = numbers.concat(symbols); 
         passwordEl.textContent = "New Password: " + genPassword(numSym);
     } else if (checkboxLet.checked) {
         passwordEl.textContent = "New Password: " + genPassword(letters);
