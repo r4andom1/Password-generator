@@ -57,7 +57,6 @@ function outputPassword() {
 }
 
 
-
 // 1. Add so that only one checkbox can be checked and still output a password
 // 2. Add a way for the user to easily copy-paste the password
 // 3. Have user input how long their password should be.
