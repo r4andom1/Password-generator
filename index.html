@@ -9,11 +9,17 @@
 <body>
     <h1>Generate a random password!</h1>
 
-    <button onclick="genPassword()" id="password-btn">Generate Password</button>
+    <button onclick="outputPassword()" id="password-btn">Generate Password</button>
     <h2 id="newpassword-el"></h2>
     <form>
         <input type="checkbox" id="letters" name="letters" checked>
-        <label for="letters">Symbols</label>
+        <label for="letters">Letters</label>
+
+        <input type="checkbox" id="numbers" name="numbers" checked>
+        <label for="numbers">Numbers</label>
+
+        <input type="checkbox" id="symbols" name="symbols" checked>
+        <label for="symbols">Symbols</label>
     </form>
     <script src="index.js"></script>
 </body>
