@@ -53,13 +53,20 @@ function outputPassword() {
         let numSym = numbers.concat(symbols); // concatenates numbers and symbols lists
         passwordEl.textContent = "New Password: " + genPassword(numSym);
         console.log("numSym checked")
+    } else if (checkboxLet.checked) {
+        passwordEl.textContent = "New Password: " + genPassword(letters);
+        console.log("letters checked")
+    } else if (checkboxNum.checked) {
+        passwordEl.textContent = "New Password: " + genPassword(numbers);
+        console.log("numbers checked")
+    } else {
+        passwordEl.textContent = "New Password: " + genPassword(symbols);
+        console.log("symbols checked")
     }
 }
 
-
-// 1. Add so that only one checkbox can be checked and still output a password
-// 2. Add a way for the user to easily copy-paste the password
-// 3. Have user input how long their password should be.
-// 5. 
-// Optional: Have them choose to include symbols/numbers
+// 1. Add a way for the user to easily copy-paste the password
+// 2. Have user input how long their password should be.
+// 3. 
+// Optional: 
 
