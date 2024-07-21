@@ -31,7 +31,7 @@ function outputPassword() {
         passwordEl.textContent = "New Password: " + genPassword(letters);
     } else if (checkboxNum.checked) {
         passwordEl.textContent = "New Password: " + genPassword(numbers);
-    } else if (checkboxSym.checked){
+    } else if (checkboxSym.checked) {
         passwordEl.textContent = "New Password: " + genPassword(symbols);
     }
 }
