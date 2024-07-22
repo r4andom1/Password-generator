@@ -8,9 +8,14 @@
 </head>
 <body>
     <h1>Generate a random password!</h1>
-
     <button onclick="outputPassword()" id="password-btn">Generate Password</button>
-    
+
+    <h3>Move slider to desired password length</h3>
+    <div class="slidecontainer">
+        <input type="range" min="4" max="20" value="10" class="slider" id="myRange">
+        <p>Value: <span id="value"></span></p>
+    </div>
+
     <h2 id="newpassword-el"></h2>
     <form>
         <input type="checkbox" id="letters" name="letters" checked>
