@@ -28,12 +28,16 @@ function outputPassword() {
     if (checkboxSym.checked) {
         allChars += symbols;
     }
-    passwordEl.textContent = "New password: " + genPassword(allChars);
+    if (allChars == "") { // if no buttons are checked, output a blank text.
+        passwordEl.textContent = "";
+    } else {
+        passwordEl.textContent = "New password: " + genPassword(allChars);
+    }
 }
 
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-const symbols = "~`!@#$%^&*()_-+={[}]|:;<>.?/"
-const numbers = "0123456789"
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+const symbols = "~`!@#$%^&*()_-+={[}]|:;<>.?/";
+const numbers = "0123456789";
 
 let passwordLength = 12; // How long password should be
 let passwordEl = document.getElementById("newpassword-el");
