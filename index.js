@@ -31,7 +31,7 @@ function outputPassword() {
     if (allChars == "") { // if no buttons are checked, output a blank text.
         passwordEl.textContent = "";
     } else {
-        passwordEl.textContent = "New password: " + genPassword(allChars);
+        passwordEl.textContent = "Your new password: " + genPassword(allChars)
     }
 }
 
@@ -39,7 +39,7 @@ const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 const symbols = "~`!@#$%^&*()_-+={[}]|:;<>.?/";
 const numbers = "0123456789";
 
-let passwordLength = 12; // How long password should be
+let passwordLength = 10; //default length
 let passwordEl = document.getElementById("newpassword-el");
 let checkboxLet = document.querySelector("#letters");
 let checkboxNum = document.querySelector("#numbers");
@@ -48,9 +48,9 @@ let checkboxSym = document.querySelector("#symbols");
 let slider = document.getElementById("myRange");
 let output = document.getElementById("value");
 output.innerHTML = slider.value; // Display the default slider value
-
-slider.oninput = function() {
-    output.innerHTML = this.value;
+slider.onchange = function(event) {
+    output.innerHTML = slider.value;
+    passwordLength = slider.value; // How long password should be based on slider pos
 }
 
 // 1. Add functionality for the slider so what the user inputs changes how long the password becomes.
