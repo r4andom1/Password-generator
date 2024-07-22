@@ -31,7 +31,7 @@ function outputPassword() {
     if (allChars == "") { // if no buttons are checked, output a blank text.
         passwordEl.textContent = "";
     } else {
-        passwordEl.textContent = `Your new password: ${genPassword(allChars)}`
+        passwordEl.textContent = "Your new password: " + genPassword(allChars)
     }
 }
 
@@ -52,7 +52,6 @@ slider.onchange = function(event) {
     output.innerHTML = slider.value;
     passwordLength = slider.value; // How long password should be based on slider pos
 }
-
 
 // 1. Add functionality for the slider so what the user inputs changes how long the password becomes.
 // 2. Add a way for the user to easily copy-paste the password (W3S?)
