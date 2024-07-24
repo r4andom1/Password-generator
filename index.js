@@ -31,7 +31,7 @@ function outputPassword() {
     if (allChars == "") { // if no buttons are checked, output a blank text.
         passwordEl.textContent = "";
     } else {
-        passwordEl.textContent = "Your new password: " + genPassword(allChars)
+        passwordEl.innerText = "Your new password: " + "\n" + genPassword(allChars);
     }
 }
 
