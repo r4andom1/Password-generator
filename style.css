@@ -18,10 +18,15 @@ button {
     width: 200px;
     height: 70px;
     opacity: 0.9;
+    cursor: pointer;
 }
 
 button:hover {
     opacity: 1;
+}
+
+button:active {
+    background-color: rgba(70, 179, 70, 0.767);
 }
 
 h3 {
